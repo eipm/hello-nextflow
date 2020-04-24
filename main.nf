@@ -26,7 +26,7 @@ if (new File(final_output_file).exists())
 
 process sayHelloInItalian {
   input: 
-    val x from italian
+    val (x) from italian
     path (previous_file) from start
     val (output) from 'italian.txt'
 
@@ -39,7 +39,7 @@ process sayHelloInItalian {
 
 process sayHelloInFrench {
   input:
-    val x from french
+    val (x) from french
     path (previous_file) from italian_ch
     val (output) from 'french.txt'
 
@@ -68,7 +68,7 @@ process sayHelloInSpanish {
 
 process sayHelloInEnglish {
   input:
-    val x from english
+    val (x) from english
     path (previous_file) from spanish_ch
     val (output) from 'english.txt'
 
@@ -79,7 +79,7 @@ process sayHelloInEnglish {
   shell:
     template 'hello.sh'
 }
-def content = ""
+
 english_ch.subscribe { file ->
   Files.copy(Paths.get(file.toString()), Paths.get(final_output_file))
 }
