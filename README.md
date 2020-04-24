@@ -4,7 +4,7 @@ Hello World Pipeline
 
 A simple script showing the basic Hello World! example for the Nextflow pipeline. 
 # Description
-4 processes, each of them append a line to a file consumed by the next process.
+4 processes, each of them appends a line (in a different language) to a file consumed by the next process.
 At the end of the execution, the content of the final file is shown.
 
 # Execution
