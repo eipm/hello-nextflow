@@ -85,5 +85,6 @@ english_ch.subscribe { file ->
 }
 
 workflow.onComplete {
- log.info new File(final_output_file).text
+  log.info "EIPM says:"
+  log.info new File(final_output_file).text
 }
