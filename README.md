@@ -1,6 +1,7 @@
 Hello World Pipeline
 ====================
-[![Nextflow](https://img.shields.io/badge/nextflow-%E2%89%A520.01.0-brightgreen.svg)](https://www.nextflow.io/)
+[![Nextflow](https://img.shields.io/badge/nextflow-%E2%89%A520.01.0-brightgreen.svg)](https://www.nextflow.io/) [![Nextflow](https://img.shields.io/badge/nextflow-%E2%89%A520.01.0-brightgreen.svg)](https://www.nextflow.io/)
+
 
 A simple script showing the basic Hello World! example for the Nextflow pipeline. 
 # Description
@@ -47,9 +48,22 @@ Then, install the latest Edge version of Nextflow with:
 This will create the <code>nextflow</code> executable locally.
 
 Finally, the pipeline can be launched as follows:
-    
-        ./nextflow -C nextflow.azure.config run main-azure.nf 
 
+``` bash
+$ ./nextflow -C nextflow.azure.config run main-azure.nf 
+N E X T F L O W  ~  version 21.04.0-edge
+Launching `main-azure.nf` [shrivelled_gates] - revision: bf54e09e5d
+executor >  azurebatch (4)
+[5e/cfec18] process > sayHelloInItalian (1) [100%] 1 of 1 ✔
+[57/e66ab9] process > sayHelloInFrench (1)  [100%] 1 of 1 ✔
+[c8/92bf47] process > sayHelloInSpanish (1) [100%] 1 of 1 ✔
+[38/c459e5] process > sayHelloInEnglish (1) [100%] 1 of 1 ✔
+Nextflow says: DONE
+Completed at: 13-Apr-2021 16:18:01
+Duration    : 3m 25s
+CPU hours   : (a few seconds)
+Succeeded   : 4
+```
 
 ## DAG visualization
 ![DAG](img/hello-nextflow-dag.png)
