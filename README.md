@@ -35,5 +35,21 @@ Bonjour world!
 Hola world!
 Hello world!
 ```    
+
+# Azure Cloud
+The pipeline can be executed on Azure Cloud.
+
+First, edit <code>nextflow.azure.config</code> and add the batch/storage accounts' names and keys.
+
+Then, install the latest Edge version of Nextflow with:
+    
+    ./install-nf-edge.sh
+This will create the <code>nextflow</code> executable locally.
+
+Finally, the pipeline can be launched as follows:
+    
+        ./nextflow -C nextflow.azure.config run main-azure.nf 
+
+
 ## DAG visualization
 ![DAG](img/hello-nextflow-dag.png)
