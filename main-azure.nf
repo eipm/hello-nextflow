@@ -64,7 +64,7 @@ process sayHelloInSpanish {
 }
 
 process sayHelloInEnglish {
-  publishDir 'az://results',  mode: 'copy', overwrite: true
+  publishDir params.resultsDir,  mode: 'copy', overwrite: true
 
   input:
   val (x) from english
