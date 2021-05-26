@@ -17,7 +17,7 @@ italian = Channel.from 'Ciao'
 french = Channel.from 'Bonjour'
 english = Channel.from 'Hello'
 spanish = Channel.from 'Hola'
-start = Channel.fromPath 'Welcome.txt'
+start = Channel.fromPath 'welcome.txt'
 
 if (new File(final_output_file).exists())
   new File(final_output_file).delete()
